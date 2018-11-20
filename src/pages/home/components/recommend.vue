@@ -2,7 +2,7 @@
   <div>
     <div class="title">热销推荐</div>
     <ul>
-      <li class="item border-bottom" v-for="(item) in recommendlist" :key="item.id">
+      <li class="item border-bottom" v-for="(item) in list" :key="item.id">
         <img class="item-img" :src="item.imgUrl" alt="">
         <div class="item-info">
           <p class="item-title">{{item.title}}</p>
@@ -17,25 +17,8 @@
 <script>
 export default {
   name: 'HomeRecommend',
-  data () {
-    return {
-      recommendlist: [{
-        id: '0001',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1508/89/895a1b7add84f23faca053ce9e3153db.water.jpg_200x200_99ae30ee.jpg',
-        title: '北京欢乐谷',
-        desc: '北京欢乐谷北京欢乐谷北京欢乐谷'
-      }, {
-        id: '0002',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1508/89/895a1b7add84f23faca053ce9e3153db.water.jpg_200x200_99ae30ee.jpg',
-        title: '北京欢乐谷',
-        desc: '北京欢乐谷北京欢乐谷北京欢乐谷'
-      }, {
-        id: '0003',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1508/89/895a1b7add84f23faca053ce9e3153db.water.jpg_200x200_99ae30ee.jpg',
-        title: '北京欢乐谷',
-        desc: '北京欢乐谷北京欢乐谷北京欢乐谷'
-      }]
-    }
+  props: {
+    list: Array
   }
 }
 </script>
