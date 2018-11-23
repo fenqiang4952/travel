@@ -50,6 +50,8 @@ export default {
     right 0
     top 0
     bottom 0
+    overflow hidden
+    height 100vh
     background #000
     .wrapper
       height 0
