@@ -1,16 +1,16 @@
 <template>
   <div>
     <div class="banner" @click="handleBannerClick">
-      <img class="banner-img" src="//img1.qunarzz.com/sight/p0/1708/2b/2b3b94de99c0a425a3.img.jpg_600x330_b40971b4.jpg" alt="">
+      <img class="banner-img" :src="bannerImg" alt="">
       <div class="banner-info">
         <div class="banner-title">八达岭长城(AAAAA景区)</div>
         <div class="banner-number">
           <span class="iconfont banner-icon">&#xe692;</span>
-          39
+          {{this.gallaryImgs.length}}
         </div>
       </div>
     </div>
-    <common-gallary @close="handleGallaryClose" v-show="showGallery" :imgs="imgs"></common-gallary>
+    <common-gallary @close="handleGallaryClose" v-show="showGallery" :imgs="gallaryImgs"></common-gallary>
   </div>
 </template>
 
@@ -21,12 +21,13 @@ export default {
   components: {
     CommonGallary
   },
+  props: {
+    sightName: String,
+    gallaryImgs: Array,
+    bannerImg: String
+  },
   data () {
     return {
-      imgs: [
-        '//img1.qunarzz.com/sight/p0/1708/2b/2b3b94de99c0a425a3.img.jpg_600x330_b40971b4.jpg',
-        '//img1.qunarzz.com/sight/p0/1803/f9/f96ac7520e964ad4a3.img.jpg_r_800x800_93b843b1.jpg'
-      ],
       showGallery: false
     }
   },
