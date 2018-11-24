@@ -18,7 +18,7 @@
 
 <script>
 import CommonGallary from '@common/gallary/Gallary'
-import CommonFade from '@common/fade/Fade'
+import CommonFade from '@common/fade/fade'
 export default {
   name: 'DetailBanner',
   components: {
